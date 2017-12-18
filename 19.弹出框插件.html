@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+		hr{
+			border:1px solid red;
+		}
+		body{
+			margin:50px;
+		}
+		.itany{
+			width: 200px;
+			height: 50px;
+		}
+    </style>
+</head>
+<body>
+	<!-- popover弹出框就是当点击一个元素时弹出一个包含标题和内容的对话框，基于工具提示插件 -->
+
+	<button class="btn btn-info" data-toggle="popover" title="<i>itany</i>" 
+		data-content="南京<strong>网博</strong>信息技术有限公司。。。。" 
+		data-animation="false"
+		data-placement="bottom"
+		data-trigger="hover"
+		data-html="true"
+		data-delay="500"
+		>网博</button>
+	
+	<button class="btn btn-primary" data-toggle="popover" id="btn">Java软件开发</button>
+	<hr>
+
+	<p style="width:300px;height: 100px;" class="bg-info" id="itany" data-toggle="popover">welcome to itany</p>
+	<button class="btn btn-danger" id="btn2">点我</button>
+
+
+	<script>
+		$('[data-toggle="popover"]:first').popover();
+
+		$('#btn').popover({
+			title:'Java',
+			content:'网博Java软件开发。。。',
+			placement:'bottom'
+		});
+
+		$('#btn2').click(()=>{
+			$('#itany').popover({
+				title:'南京网博',
+				content:'南京网博棒棒哒',
+				trigger:'manual'
+			}).popover('show');
+		});
+
+		$('#itany').on('shown.bs.popover',()=>{
+			setTimeout(()=>{
+				$('#itany').popover('hide');
+			},1000);
+		});
+	</script>
+</body>
+</html>

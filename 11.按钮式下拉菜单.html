@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+		hr{
+			border:1px solid red;
+		}
+		body{
+			margin:50px;
+		}
+		.itany{
+			width: 200px;
+			height: 50px;
+		}
+    </style>
+</head>
+<body>
+	<!-- 单按钮下拉菜单，和前面的下拉菜单一样，只不过，这个是在按钮组里 -->
+	<div class="btn-group">
+		<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+			下拉菜单<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">资讯</a></li>
+			<li><a href="#">产品</a></li>
+			<li><a href="#">网博</a></li>
+		</ul>
+	</div>
+
+	<!-- 分裂式按钮下拉菜单 -->
+	<div class="btn-group dropup">
+		<button class="btn btn-danger btn-lg">下拉菜单</button>
+		<button class="btn btn-danger dropdown-toggle btn-lg" data-toggle="dropdown">
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">资讯</a></li>
+			<li><a href="#">产品</a></li>
+			<li><a href="#">网博</a></li>
+		</ul>
+	</div>
+</body>
+</html>

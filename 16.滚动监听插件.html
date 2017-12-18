@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+		hr{
+			border:1px solid red;
+		}
+		body{
+			margin:50px;
+		}
+		.itany{
+			width: 200px;
+			height: 50px;
+		}
+    </style>
+</head>
+<body>
+	<!-- scrollspy滚动监听插件是用来根据滚动条所处在的位置自动更新导航项目，显示导航项目高亮显示 -->
+	<nav class="navbar navbar-default" id="nav">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">Web开发</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="#html5">HTML5</a></li>
+			<li><a href="#bootstrap">BootStrap</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">JavaScript <span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#jquery">jQuery</a></li>
+					<li><a href="#extjs">Extjs</a></li>
+					<li><a href="#yui">Yui</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	
+	<!-- 
+		data-target:设置绑定监听的导航条
+		data-spy:设置监听绑定容器，即监听滚动条的拖动
+		data-offset:设置滚动多少像素时高亮显示对应的菜单，默认为10px
+	 -->
+	<div data-target="#nav" data-spy="scroll" data-offset="0" style="height: 200px;overflow: auto; position:relative;padding: 0 10px;">
+		<h4 id="html5">HTML5</h4>
+		<p>HTML5HTML5HTML5HTML5HTML5HTML5HTML5HTML5HTML5</p>
+		<p>HTML5HTML5HTML5HTML5HTML5HTML5HTML5HTML5HTML5</p>
+		<p>HTML5HTML5HTML5HTML5HTML5HTML5HTML5HTML5HTML5</p>
+		<p>HTML5HTML5HTML5HTML5HTML5HTML5HTML5HTML5HTML5</p>
+		<p>HTML5HTML5HTML5HTML5HTML5HTML5HTML5HTML5HTML5</p>
+		<h4 id="bootstrap">BootStrap</h4>
+		<p>BootStrapBootStrapBootStrapBootStrapBootStrap</p>
+		<p>BootStrapBootStrapBootStrapBootStrapBootStrap</p>
+		<p>BootStrapBootStrapBootStrapBootStrapBootStrap</p>
+		<p>BootStrapBootStrapBootStrapBootStrapBootStrap</p>
+		<p>BootStrapBootStrapBootStrapBootStrapBootStrap</p>
+		<h4 id="jquery">jQuery</h4>
+		<p>jQueryjQueryjQueryjQueryjQueryjQueryjQueryjQuery</p>
+		<p>jQueryjQueryjQueryjQueryjQueryjQueryjQueryjQuery</p>
+		<p>jQueryjQueryjQueryjQueryjQueryjQueryjQueryjQuery</p>
+		<p>jQueryjQueryjQueryjQueryjQueryjQueryjQueryjQuery</p>
+		<p>jQueryjQueryjQueryjQueryjQueryjQueryjQueryjQuery</p>
+		<h4 id="extjs">Extjs</h4>
+		<p>ExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjs</p>
+		<p>ExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjs</p>
+		<p>ExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjs</p>
+		<p>ExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjs</p>
+		<p>ExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjs</p>
+		<h4 id="yui">Yui</h4>
+		<p>ExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjs</p>
+		<p>ExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjs</p>
+		<p>ExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjs</p>
+		<p>ExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjs</p>
+		<p>ExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjsExtjs</p>
+	</div>
+
+</body>
+</html>
